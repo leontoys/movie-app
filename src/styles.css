@@ -1,0 +1,50 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+}
+
+.container{
+
+}
+
+.list-container{
+    display: flex;
+    justify-content: space-between;
+    gap : 0.1rem;
+}
+
+.movie>img{
+    height: 75%;
+}
+
+.movie:hover{
+    transform: scale(1.1);
+}
+
+.heading>h2{
+    color : #fff;
+}
+
+.header{
+    margin : 0.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    margin-left : 75%;
+    margin-right: 0;
+}
+
+.search>input{
+    border-radius: 0.5rem;
+}
+
+h1{
+    color : #ff0000;
+}

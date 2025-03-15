@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import MovieList from '../../src/components/MovieList';
+import "./styles.css"
+import Heading from './components/Heading';
+import Search from './components/Search';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [movies, setMovies] = useState([]);
+  const [searchValue,setSearchValue] = useState("")
+
+  //query OMDB
+  const getMovies = async (searchValue) => {
+    try {
+      const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=a2afdd9f`
+      const response = await fetch(url)
+      if(!response.ok){
+        throw new Error("OMDB Error")
+      }
+      const responseJson = await response.json()
+      if(responseJson.Search){
+        console.log(responseJson.Search)
+        setMovies(responseJson.Search)
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  //on page load
+  useEffect(() => {
+    getMovies(searchValue)
+  }, [searchValue])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='container'>
+      <h1>React Flix</h1>
+      <div className='header'>
+        <Heading heading="Movies"></Heading>
+        <Search searchValue={searchValue} setSearchValue={setSearchValue}></Search>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='list-container'>
+        <MovieList movies={movies}></MovieList>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
