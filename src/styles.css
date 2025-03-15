@@ -18,8 +18,26 @@ body{
     gap : 0.1rem;
 }
 
+.movie{
+    position: relative;
+}
+
 .movie>img{
     height: 75%;
+    transition: 0.5s ease;
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    transition: 0.5s ease;
+    color : #fff;
+    opacity: 0;
+}
+
+.movie:hover .overlay{
+    opacity: 1;
 }
 
 .movie:hover{

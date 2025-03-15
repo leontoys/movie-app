@@ -3,6 +3,8 @@ import MovieList from '../../src/components/MovieList';
 import "./styles.css"
 import Heading from './components/Heading';
 import Search from './components/Search';
+import AddFavourites from './components/AddFavourites';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -33,13 +35,13 @@ function App() {
 
   return (
     <div className='container'>
-      <h1>React Flix</h1>
+      <h1>REACT FLIX</h1>
       <div className='header'>
         <Heading heading="Movies"></Heading>
         <Search searchValue={searchValue} setSearchValue={setSearchValue}></Search>
       </div>
       <div className='list-container'>
-        <MovieList movies={movies}></MovieList>
+        <MovieList movies={movies} AddFavourites={AddFavourites}></MovieList>
       </div>
     </div>
   );
