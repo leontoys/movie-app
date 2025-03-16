@@ -9,12 +9,11 @@ body{
 }
 
 .container{
-
+    max-height: fit-content;
 }
 
 .list-container{
     display: flex;
-    justify-content: space-between;
     gap : 0.1rem;
 }
 
@@ -23,7 +22,6 @@ body{
 }
 
 .movie>img{
-    height: 75%;
     transition: 0.5s ease;
     display: block;
 }
