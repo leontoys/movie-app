@@ -3,7 +3,7 @@ const Search = ({searchValue,setSearchValue})=>{
         <>
             <input type="text" 
             value={searchValue}
-            onChange={(e)=>setSearchValue(e.target.value)}
+            onInput={(e)=>setSearchValue(e.target.value)}
             placeholder="Type to search..."></input>
         </>
     )
