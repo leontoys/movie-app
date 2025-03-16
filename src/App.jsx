@@ -30,6 +30,12 @@ function App() {
     }
   }
 
+  //on page load - read from local storage
+  useEffect(()=>{
+    const newList =  JSON.parse(localStorage.getItem("react-movie-favourites"))||[]
+    setFavourites(newList)
+  },[])
+
   //as soon as search value changes query
   useEffect(() => {
     getMovies(searchValue)
@@ -37,13 +43,15 @@ function App() {
 
   const addToFavourites = (movie)=>{
     //update favourites list
-    setFavourites([...favourites,movie])
-    console.log(favourites)
+    const newList = [...favourites,movie]
+    setFavourites(newList)
+    localStorage.setItem("react-movie-favourites",JSON.stringify(newList))
   }
 
   const removeFromFavourites = (movie)=>{
     const newList = favourites.filter(item=>item.imdbID!==movie.imdbID)
     setFavourites(newList)
+    localStorage.setItem("react-movie-favourites",JSON.stringify(newList))
   }
 
   return (
