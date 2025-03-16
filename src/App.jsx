@@ -1,6 +1,6 @@
 import "./styles.css"
 import { useState, useEffect } from 'react';
-import MovieList from '../../src/components/MovieList';
+import MovieList from './components/MovieList';
 import Heading from './components/Heading';
 import Search from './components/Search';
 import AddFavourites from './components/AddFavourites';
