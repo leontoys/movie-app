@@ -54,6 +54,11 @@ function App() {
   //add
   const addToFavourites = (movie) => {
     //update favourites list
+    //check if it exists
+    const existingMovie = favourites.find(item => item.imdbID === movie.imdbID)
+    if(existingMovie){
+      return//don't add
+    }
     const newList = [...favourites, movie]
     console.log("add-favourites", newList)
     setFavourites(newList)
