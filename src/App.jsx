@@ -17,7 +17,7 @@ function App() {
       //read api key
       const apikey = import.meta.env.VITE_OMDB_API_KEY
       //omdb query 
-      const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=${apikey}`
+      const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=${apikey}`
       const response = await fetch(url)
       console.log("response", response)
       //if response has any error

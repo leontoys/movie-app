@@ -1,0 +1,32 @@
+Yes, you can use Chrome DevTools for mobile browser debugging. Here are the key steps to debug websites on mobile Chrome:
+
+1. Enable USB debugging on your Android device in the Developer Options[7].
+
+2. Connect your Android device to your development machine using a USB cable[7].
+
+3. On your development machine, open Chrome and navigate to chrome://inspect#devices[7].
+
+4. Ensure "Discover USB devices" is enabled[7].
+
+5. Your Android device should appear in the list of remote targets. If it shows as "Offline," accept the USB debugging permission prompt on your device[3].
+
+6. Open Chrome on your Android device and navigate to the website you want to debug[3].
+
+7. On your development machine, you'll see the open tabs from your Android device. Click "Inspect" next to the desired tab[3].
+
+8. A new DevTools instance will open, allowing you to debug the mobile website as if it were running on your desktop[3].
+
+This method allows you to inspect elements, modify DOM and CSS, use the console, and access other DevTools features for your mobile site[2]. It's a powerful way to debug and optimize websites for mobile browsers, ensuring compatibility and performance across devices.
+
+Citations:
+[1] https://www.browserstack.com/support/faq/mobile/features-mobile/can-i-use-developer-tools-on-mobile-browsers
+[2] https://docs.digital.ai/continuous-testing/docs/lt/live-testing-home/resources-for-developers/remote-application-debugging/remote-debugging-for-web/chrome-devtools-for-android-chrome
+[3] https://www.browserstack.com/guide/chrome-mobile-debugging
+[4] https://gist.github.com/royshouvik/019b25a2aa9415771a29
+[5] https://stackoverflow.com/questions/37256331/is-it-possible-to-open-developer-tools-console-in-chrome-on-android-phone
+[6] https://www.linkedin.com/advice/3/what-steps-debug-mobile-apps-using-chrome-n7uzc
+[7] https://developer.chrome.com/docs/devtools/remote-debugging
+[8] https://www.reddit.com/r/learnprogramming/comments/v4g8om/why_is_there_no_dev_tools_for_mobile/
+
+---
+Answer from Perplexity: pplx.ai/share
