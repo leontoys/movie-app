@@ -7,11 +7,10 @@ const Search = ({ searchValue, setSearchValue }) => {
                 autoComplete="off"
                 value={searchValue}
                 onInput={(e) => {
-                    alert("change fired", e.target.value);
                     setSearchValue(e.target.value);
                 }}
                 placeholder="Type to search..."
-            />
+            />{searchValue}
 
         </>
     )

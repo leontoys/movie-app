@@ -28,10 +28,12 @@ function App() {
       console.log("responsejson", responseJson)
       //if any movies found, only then update -- to avoid null error
       if (responseJson.Search) {
+        alert("movies")
         console.log("movies", responseJson.Search)
         setMovies(responseJson.Search)
       }
     } catch (error) {
+      alert(error.message)
       console.error(error)
     }
   }
