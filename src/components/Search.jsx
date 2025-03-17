@@ -6,10 +6,6 @@ const Search = ({ searchValue, setSearchValue }) => {
                 inputMode="text"
                 autoComplete="off"
                 value={searchValue}
-                onInput={(e) => {
-                    console.log("input fired", e.target.value);
-                    setSearchValue(e.target.value);
-                }}
                 onChange={(e) => {
                     console.log("change fired", e.target.value);
                     setSearchValue(e.target.value);
