@@ -10,7 +10,7 @@ const Search = ({ searchValue, setSearchValue }) => {
                     setSearchValue(e.target.value);
                 }}
                 placeholder="Type to search..."
-            />{searchValue}
+            />
 
         </>
     )

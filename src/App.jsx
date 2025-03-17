@@ -32,7 +32,6 @@ function App() {
         setMovies(responseJson.Search)
       }
     } catch (error) {
-      alert(error.message)
       console.error(error)
     }
   }

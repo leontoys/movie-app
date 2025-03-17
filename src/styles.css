@@ -60,6 +60,7 @@ h1{
 .movie>img{
     height: 35vh;
     transition: 0.5s ease;
+    max-width: 50vh;
 }
 
 .movie>img:hover{
