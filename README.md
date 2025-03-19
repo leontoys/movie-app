@@ -10,6 +10,8 @@ A simple movie search application built using React and the [TMDB API](https://w
 ## 🎬 Demo
 [View live demo](https://movie-app-rose-five.vercel.app/) 
 
+![Demo](./src/assets/netflix.png)
+
 ## 🛠️ Technologies Used
 - **Frontend**: React.js, CSS
 - **API**: [OMDB API](https://www.omdbapi.com/)
